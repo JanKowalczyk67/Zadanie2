@@ -37,8 +37,11 @@ Każdy typ sprzętu posiada wspólne cechy (ID, nazwa, dostępność) oraz włas
 
 **Użytkownicy**
 Klasa abstrakcyjna User
+
 Klasy dziedziczące:
+
 Student (limit: 2 wypożyczenia)
+
 Employee (limit: 5 wypożyczeń)
 
 
