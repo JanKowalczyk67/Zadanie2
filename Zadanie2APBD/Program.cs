@@ -24,13 +24,15 @@ rentalService.RentEquipment(student, laptop, 1);
 try
 {
     rentalService.RentEquipment(student, projector, 1);
-    rentalService.RentEquipment(student, camera, 1);
+   // rentalService.RentEquipment(student, camera, 1);
 }
 catch (Exception ex)
 {
     Console.WriteLine(ex.Message);
 }
 
-rentalService.ReturnEquipment(laptop);
+//rentalService.ReturnEquipment(laptop);
+rentalService.ReturnEquipment(projector);
+
 
 reportService.GenerateReport(equipmentService.GetAll(), rentalService.GetAll());
