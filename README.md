@@ -78,24 +78,40 @@ Dziedziczenie
 Zastosowane tam, gdzie ma sens domenowy:
 
 Equipment → różne typy sprzętu
+
 User → różne typy użytkowników i limity
+
 Centralizacja reguł biznesowych
+
 Limity użytkowników są definiowane w klasach (Student, Employee)
+
 Naliczanie kar znajduje się w jednym miejscu (RentalService)
 
 Reguły biznesowe
+
 Student może mieć maksymalnie 2 aktywne wypożyczenia
+
 Pracownik może mieć maksymalnie 5 aktywnych wypożyczeń
+
 Nie można wypożyczyć niedostępnego sprzętu
+
 Przekroczenie limitu blokuje wypożyczenie
+
 Opóźniony zwrot powoduje naliczenie kary (10 jednostek za dzień)
+
+
 Scenariusz działania
 
 Program demonstruje:
 
 Dodanie sprzętu różnych typów
+
 Dodanie użytkowników
+
 Poprawne wypożyczenie sprzętu
+
 Próbę przekroczenia limitu (obsługa błędu)
+
 Zwrot sprzętu
+
 Wygenerowanie raportu końcowego
