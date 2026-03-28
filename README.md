@@ -6,28 +6,41 @@ System pozwala na zarządzanie sprzętem, użytkownikami oraz procesem wypożycz
 
 **Funkcjonalności:**
 Dodawanie użytkowników (Student, Employee)
+
 Dodawanie sprzętu (Laptop, Projector, Camera)
+
 Wyświetlanie wszystkich urządzeń
+
 Wyświetlanie dostępnego sprzętu
+
 Wypożyczanie sprzętu
+
 Zwrot sprzętu (z uwzględnieniem kary za opóźnienie)
+
 Blokowanie wypożyczenia przy przekroczeniu limitu
+
 Raport podsumowujący stan systemu
 
 **Sprzęt:**
 Klasa abstrakcyjna Equipment
+
 Klasy dziedziczące:
+
 Laptop
+
 Projector
+
 Camera
 
 Każdy typ sprzętu posiada wspólne cechy (ID, nazwa, dostępność) oraz własne pola specyficzne.
+
 
 **Użytkownicy**
 Klasa abstrakcyjna User
 Klasy dziedziczące:
 Student (limit: 2 wypożyczenia)
 Employee (limit: 5 wypożyczeń)
+
 
 **Wypożyczenie**
 Klasa Rental przechowująca:
@@ -41,6 +54,7 @@ Struktura projektu
 
 Projekt został podzielony na logiczne części:
 
+
 **folder Models**
 
 Zawiera klasy domenowe:
@@ -48,6 +62,7 @@ Zawiera klasy domenowe:
 Equipment, Laptop, Projector, Camera
 User, Student, Employee
 Rental
+
 
 **folder Services**
 
@@ -58,9 +73,11 @@ UserService – zarządzanie użytkownikami
 RentalService – obsługa wypożyczeń i zwrotów
 ReportService – generowanie raportów
 
+
 **plik Program.cs**
 
 Odpowiada za uruchomienie aplikacji i prezentację scenariusza działania.
+
 
 Decyzje projektowe
 Zasada pojedynczej odpowiedzialności (SRP)
@@ -68,12 +85,16 @@ Zasada pojedynczej odpowiedzialności (SRP)
 Każda klasa ma jedną, jasno określoną rolę:
 
 modele przechowują dane
+
 serwisy realizują logikę biznesową
+
 Niskie sprzężenie (Low Coupling)
 
 Logika została rozdzielona między klasy serwisowe, dzięki czemu zmiany w jednym obszarze nie wpływają bezpośrednio na inne.
 
-Dziedziczenie
+
+
+**Dziedziczenie**
 
 Zastosowane tam, gdzie ma sens domenowy:
 
@@ -100,7 +121,8 @@ Przekroczenie limitu blokuje wypożyczenie
 Opóźniony zwrot powoduje naliczenie kary (10 jednostek za dzień)
 
 
-Scenariusz działania
+
+**Scenariusz działania**
 
 Program demonstruje:
 
